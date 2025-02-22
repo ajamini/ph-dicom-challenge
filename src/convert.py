@@ -1,6 +1,5 @@
 import png
 
-
 def mri_to_png(plan, png_file):
     """ Function to convert from a DICOM image to png
     """

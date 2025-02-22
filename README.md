@@ -18,6 +18,7 @@ Resource Used:
 
 1. https://www.dicomlibrary.com/dicom/dicom-tags/
 2. https://dicom.innolitics.com/ciods/
+3. https://pmc.ncbi.nlm.nih.gov/articles/PMC3354356
 3. https://dicomiseasy.blogspot.com/2012/08/chapter-12-pixel-data.html
 
 ## Installation and Setup
@@ -225,10 +226,8 @@ Using an external cloud storage service like S3 or Azure File Storage to store a
 
 Without the need to organize the files into folders, we can generate a random name for each file and store them in a flat list.
 
-Additionally, once all the details are extracted and a PNG file is created for each DICOM file, we can archive the original DICOM file.
-
 ### Worker
-We should use a queue system to process all files through workers that can perform memory- and CPU-intensive operations, such as extracting details, analyzing attributes, generating browser-compatible images (PNG, JPEG, GIF), and handling image processing for machine learning purposes.
+We should use a queue system to process all files through workers that can perform memory- and CPU-intensive operations, such as extracting details, analyzing attributes, generating browser-compatible images (PNG, JPEG, GIF), creating GIF of all images and handling image processing for machine learning purposes.
 
 ### Security
 Implement authentication via JSON Web Tokens (JWT) or OAuth2 to restrict access to the endpoints. We should create different roles like admin, standard users, and read-only users.
@@ -246,3 +245,7 @@ Use third-party error tracking (e.g., Sentry) for quick diagnosis of issues in p
 
 ## License
 This project is licensed under the Apache License. You are free to modify and distribute this project, but please provide credit to the original authors.
+
+## Credit
+We appreciate and thank the maintainers of the following repo for making their work available.
+- https://github.com/dennyglee/dicom-to-png
