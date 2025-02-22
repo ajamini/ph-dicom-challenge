@@ -232,6 +232,11 @@ We should use a queue system to process all files through workers that can perfo
 ### Security
 Implement authentication via JSON Web Tokens (JWT) or OAuth2 to restrict access to the endpoints. We should create different roles like admin, standard users, and read-only users.
 
+### Testing
+Implement a robust test suite (e.g., using pytest or unittest) to cover unit tests, integration tests, and edge cases. 
+
+Automate the testing process with a Continuous Integration (CI) pipeline, such as GitHub Actions or Jenkins, to ensure consistent quality and reliability with every new commit or pull request.
+
 ### Other Enhancements
 Better logging and application performance monitoring (e.g., New Relic) can provide real-time insight into system health and performance.
 
