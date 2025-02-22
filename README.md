@@ -61,8 +61,7 @@ No database was utilized for this project to keep it simple. Read the section ab
 ## API Endpoints
 Below are the endpoints available in the current version of this microservice:
 
-### Form (for uploading)
-GET /
+### GET /
 
 Include a simple form that will allow you make a POST call to the upload endpoints. In this form you can type in the Study name and attach single or multiple files at once.
 
@@ -110,8 +109,8 @@ If duplicate filename existing in under the study, you will get an error.
 }
 ```
 
-### Get list of all Studies
-GET /files
+### GET /files
+Get list of all Studies
 ```
 {
   "studies": [
@@ -123,8 +122,8 @@ GET /files
 ```
 
 
-### Get list of files in a study folder
-GET /files/iraj-x-ray
+### GET /files/iraj-x-ray
+Get list of files in a study folder
 ```
 {
   "files": [
