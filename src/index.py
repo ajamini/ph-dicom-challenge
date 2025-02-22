@@ -206,12 +206,12 @@ def get_file_png(study, filename):
         mkdir(png_file_dir)
 
     png_file = open(png_file_path, 'wb')
-    # try:
-    mri_to_png(plan, png_file)
-    png_file.close()
-    # except:
-    #     png_file.close()
-    #     unlink(png_file_path)
-    #     return errorResponse("Unable to convert DICOM to png")
+    try:
+        mri_to_png(plan, png_file)
+        png_file.close()
+    except:
+        png_file.close()
+        unlink(png_file_path)
+        return errorResponse("Unable to convert DICOM to png")
 
     return send_file(png_file_path, mimetype='image/png')
