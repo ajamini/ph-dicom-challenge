@@ -1,4 +1,4 @@
-#DICOM Microservice
+# DICOM Microservice
 A minimal Flask-based microservice for handling DICOM files. The service can:
 
 1. Accept and store DICOM files (upload).
